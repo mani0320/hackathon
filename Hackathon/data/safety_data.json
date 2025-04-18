@@ -1,0 +1,202 @@
+[
+  {
+    "lat": 36.091024,
+    "lon": -80.248105,
+    "type": "light",
+    "severity": 2,
+    "label": "Streetlight",
+    "timestamp": "2024-04-1 11:45"
+  },
+  {
+    "lat": 36.09871,
+    "lon": -80.245312,
+    "type": "crime",
+    "severity": 4,
+    "label": "Vandalism",
+    "timestamp": "2024-04-6 7:15"
+  },
+  {
+    "lat": 36.094764,
+    "lon": -80.248872,
+    "type": "crime",
+    "severity": 1,
+    "label": "Robbery",
+    "timestamp": "2024-04-3 14:15"
+  },
+  {
+    "lat": 36.094265,
+    "lon": -80.245897,
+    "type": "light",
+    "severity": 3,
+    "label": "Broken Light",
+    "timestamp": "2024-04-4 7:00"
+  },
+  {
+    "lat": 36.092661,
+    "lon": -80.244364,
+    "type": "light",
+    "severity": 1,
+    "label": "Broken Light",
+    "timestamp": "2024-04-6 15:00"
+  },
+  {
+    "lat": 36.093234,
+    "lon": -80.24157,
+    "type": "light",
+    "severity": 1,
+    "label": "Broken Light",
+    "timestamp": "2024-04-4 18:30"
+  },
+  {
+    "lat": 36.098505,
+    "lon": -80.243885,
+    "type": "crime",
+    "severity": 1,
+    "label": "Robbery",
+    "timestamp": "2024-04-7 7:00"
+  },
+  {
+    "lat": 36.09472,
+    "lon": -80.246779,
+    "type": "light",
+    "severity": 4,
+    "label": "Broken Light",
+    "timestamp": "2024-04-6 12:45"
+  },
+  {
+    "lat": 36.093096,
+    "lon": -80.247984,
+    "type": "light",
+    "severity": 5,
+    "label": "Streetlight",
+    "timestamp": "2024-04-5 0:15"
+  },
+  {
+    "lat": 36.092444,
+    "lon": -80.243953,
+    "type": "crime",
+    "severity": 1,
+    "label": "Robbery",
+    "timestamp": "2024-04-5 23:30"
+  },
+  {
+    "lat": 36.092919,
+    "lon": -80.241078,
+    "type": "crime",
+    "severity": 2,
+    "label": "Assault",
+    "timestamp": "2024-04-2 23:00"
+  },
+  {
+    "lat": 36.098935,
+    "lon": -80.24759,
+    "type": "crime",
+    "severity": 3,
+    "label": "Robbery",
+    "timestamp": "2024-04-3 3:30"
+  },
+  {
+    "lat": 36.097622,
+    "lon": -80.248187,
+    "type": "light",
+    "severity": 4,
+    "label": "Dim Light",
+    "timestamp": "2024-04-7 9:15"
+  },
+  {
+    "lat": 36.092643,
+    "lon": -80.244227,
+    "type": "light",
+    "severity": 4,
+    "label": "Broken Light",
+    "timestamp": "2024-04-1 16:45"
+  },
+  {
+    "lat": 36.09024,
+    "lon": -80.246768,
+    "type": "crime",
+    "severity": 5,
+    "label": "Vandalism",
+    "timestamp": "2024-04-6 22:00"
+  },
+  {
+    "lat": 36.094634,
+    "lon": -80.247157,
+    "type": "light",
+    "severity": 1,
+    "label": "Streetlight",
+    "timestamp": "2024-04-2 10:30"
+  },
+  {
+    "lat": 36.090657,
+    "lon": -80.248391,
+    "type": "light",
+    "severity": 5,
+    "label": "Dim Light",
+    "timestamp": "2024-04-2 6:00"
+  },
+  {
+    "lat": 36.091694,
+    "lon": -80.242429,
+    "type": "light",
+    "severity": 5,
+    "label": "Broken Light",
+    "timestamp": "2024-04-4 9:45"
+  },
+  {
+    "lat": 36.09665,
+    "lon": -80.243416,
+    "type": "light",
+    "severity": 4,
+    "label": "Streetlight",
+    "timestamp": "2024-04-2 3:45"
+  },
+  {
+    "lat": 36.097278,
+    "lon": -80.246283,
+    "type": "light",
+    "severity": 1,
+    "label": "Broken Light",
+    "timestamp": "2024-04-2 9:15"
+  },
+  {
+    "lat": 36.090722,
+    "lon": -80.239705,
+    "type": "crime",
+    "severity": 5,
+    "label": "Robbery",
+    "timestamp": "2024-04-2 22:15"
+  },
+  {
+    "lat": 36.09588,
+    "lon": -80.247075,
+    "type": "light",
+    "severity": 4,
+    "label": "Broken Light",
+    "timestamp": "2024-04-7 22:15"
+  },
+  {
+    "lat": 36.093656,
+    "lon": -80.248541,
+    "type": "crime",
+    "severity": 1,
+    "label": "Burglary",
+    "timestamp": "2024-04-7 9:15"
+  },
+  {
+    "lat": 36.096474,
+    "lon": -80.239217,
+    "type": "crime",
+    "severity": 4,
+    "label": "Burglary",
+    "timestamp": "2024-04-5 15:15"
+  },
+  {
+    "lat": 36.095547,
+    "lon": -80.240781,
+    "type": "light",
+    "severity": 4,
+    "label": "Streetlight",
+    "timestamp": "2024-04-1 15:45"
+  }
+]

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StreetWise - Safest Route Finder</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>#map { height: 80vh; width: 100%; margin-top: 10px; }</style>
+</head>
+
+<body>
+  <div class="app-container">
+    <header>
+      <div class="logo">
+        <i class="fas fa-route"></i>
+        <h1>StreetWise Finder</h1>
+      </div>
+      <div class="theme-toggle">
+        <button id="theme-toggle-btn">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <div class="form-panel">
+        <h2>Find Your Safest Path</h2>
+        <p>Enter locations to discover the safest walking route</p>
+
+        <div style="background-color: lightblue; padding: 10px; border-left: 6px solid #ffa500; margin-bottom: 10px; color: black;">
+          <strong>🗺️ Map Legend:</strong><br>
+          🔴 <strong>Red Pins</strong> = Reported Crimes (e.g. theft, assault)<br>
+          💡 <strong>Yellow Pins</strong> = Streetlights or Lighting Conditions<br>
+          📍 Click a pin to view details like severity, time, and a link to Google Maps.
+        </div>
+
+        <div class="search-container">
+          <div class="input-group">
+            <label for="start"><i class="fas fa-map-marker-alt"></i></label>
+            <input type="text" id="start" placeholder="Start (e.g. 123 Main St)">
+          </div>
+          <div class="input-group">
+            <label for="end"><i class="fas fa-flag-checkered"></i></label>
+            <input type="text" id="end" placeholder="Destination (e.g. City Hall)">
+          </div>
+          <button id="find-route-btn" onclick="findRoute()">
+            <span>Find Route</span>
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+
+        <div id="route-info" class="route-info hidden">
+          <div class="info-item">
+            <i class="fas fa-shield-alt"></i>
+            <div>
+              <span>Safety Score</span>
+              <div class="safety-meter">
+                <div id="safety-meter-fill"></div>
+                <span id="score-value">--</span>
+              </div>
+              <div style="margin-top: 5px;">
+                <strong>What do safety scores mean?</strong><br />
+                <span style="color:green">🟢 0–3: Safe</span><br />
+                <span style="color:orange">🟠 4–6: Moderate</span><br />
+                <span style="color:red">🔴 7–10: Dangerous</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="fas fa-walking"></i>
+            <div>
+              <span>Distance</span>
+              <strong id="distance-value">--</strong>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <span>Est. Time</span>
+              <strong id="time-value">--</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="safety-tips hidden" id="safety-tips">
+          <h3><i class="fas fa-info-circle"></i> Safety Tips</h3>
+          <ul id="safety-tips-list"></ul>
+        </div>
+      </div>
+
+      <div class="map-container">
+        <div id="map"></div>
+        <div class="map-controls">
+          <button id="toggle-heatmap-btn" title="Toggle Safety Heatmap">
+            <i class="fas fa-fire"></i>
+          </button>
+          <button id="recenter-map-btn" title="Recenter Map">
+            <i class="fas fa-crosshairs"></i>
+          </button>
+        </div>
+        <div class="loading-overlay hidden" id="loading-overlay">
+          <div class="spinner"></div>
+          <span>Finding your safest route...</span>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>StreetWise &copy; 2025 | <a href="#" id="about-link">About</a></p>
+    </footer>
+  </div>
+
+  <div id="about-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>About StreetWise</h2>
+      <p>StreetWise helps you navigate through urban areas by finding the safest walking paths based on crime data, lighting conditions, and other safety factors.</p>
+      <p>This application was created as part of a hackathon project to promote safer community navigation and awareness.</p>
+      <h3>How It Works</h3>
+      <p>We analyze various data points along potential routes including:</p>
+      <ul>
+        <li>Historical crime incidents</li>
+        <li>Street lighting</li>
+        <li>Pedestrian traffic</li>
+        <li>Time of day considerations</li>
+      </ul>
+      <p>Each route is assigned a safety score from 0–10, with lower scores indicating safer routes.</p>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+
+:root {
+  --primary-color: #5856D6;
+  --secondary-color: #8A84FF;
+  --accent-color: #FF2D55;
+  --text-color: #333;
+  --light-text: #666;
+  --very-light-text: #999;
+  --background: #fff;
+  --panel-bg: #f8f9fa;
+  --border-color: #e0e0e0;
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);
+  --danger-color: #ff3b30;
+  --warning-color: #ff9500;
+  --success-color: #34c759;
+  --transition: all 0.3s ease;
+  --radius: 12px;
+}
+
+.dark-theme {
+  --primary-color: #5E5CE6;
+  --secondary-color: #7A76FF;
+  --text-color: #f0f0f0;
+  --light-text: #ccc;
+  --very-light-text: red;
+  --background: #1c1c1e;
+  --panel-bg: #2c2c2e;
+  --border-color: #3a3a3c;
+  --shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'SF Pro Text', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background);
+  transition: var(--transition);
+  padding: 20px;
+}
+
+h1 {
+  color: var(--primary-color);
+}
+
+.form-container {
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 8px;
+  margin-right: 10px;
+  width: 250px;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
